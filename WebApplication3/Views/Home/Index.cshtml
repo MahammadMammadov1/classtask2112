@@ -1,0 +1,55 @@
+﻿@model HomeViewModels
+
+<h1>EMPLOYEES</h1>
+<table class="table-warning" border="1">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Fullname</th>
+            <th scope="col">Age</th>
+            <th scope="col">Salary</th>
+            <th scope="col">DepartmentId</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var emp in Model.employees)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.FullName</td>
+                <td>@emp.Age</td>
+                <td>@emp.Salary</td>
+                <td>@emp.DepartmentId</td>
+            </tr>
+
+        }
+        
+   
+    </tbody>
+</table>
+
+<h1>DEPARTMENTS</h1>
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">name</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var dpr in Model.departments)
+        {
+            <tr>
+                <td>@dpr.Id</td>
+                <td>@dpr.Name</td>
+                
+            </tr>
+
+        }
+
+
+    </tbody>
+</table>
